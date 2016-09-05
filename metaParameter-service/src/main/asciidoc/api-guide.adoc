@@ -1,0 +1,96 @@
+= API Courbe de charge
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+[[aperçu]]
+= Aperçu
+
+[[aperçu-http-verbs]]
+== Verbes HTTP
+
+Les actions sur les ressources utilisent se font à l'aide des verbes HTTP
+
+|===
+| Verbe | Description
+
+| `GET`
+| Permet de demander une ressource
+
+| `POST`
+| Permet de créer une nouvelle ressource
+
+| `PATCH`
+| Permet de mettre à jour une ressource existante
+
+| `DELETE`
+| Permet de supprimer une ressource existante
+|===
+
+[[aperçu-http-status-codes]]
+== codes HTTP
+
+Les codes retour utilsés respecte le plus possible les codes retour standard HTTP.
+
+|===
+| Code | Signification
+
+| `200 OK`
+| Requête traitée avec succès.
+
+| `201 Created`
+| Requête traitée avec succès et création d’un élément.
+
+| `204 No Content`
+| Requête traitée avec succès mais pas d’information à renvoyer.
+
+| `400 Bad Request`
+| La syntaxe de la requête est erronée.
+
+| `404 Not Found`
+| Ressource non trouvée.
+|===
+
+[[ressources]]
+= Ressources
+
+[[resources-cdc]]
+== cdc
+
+La ressource `cdc` est utilisée pour récupérer les courbes de charge.
+
+
+
+[[ressources-cdc-get]]
+=== Récupération d'une courbe de charge
+
+Une requête utilisant la méthode `GET` est utilisée pour récupérer une courbe de charge
+
+
+==== Les paramètres de la requête
+
+include::{snippets}/cdc-get/request-parameters.adoc[]
+
+==== Example de requête HTTP
+
+include::{snippets}/cdc-get/http-request.adoc[]
+
+==== Example de requête curl
+
+include::{snippets}/cdc-get/curl-request.adoc[]
+
+==== Structure de la réponse
+
+include::{snippets}/cdc-get/response-fields.adoc[]
+
+==== Les Headers de la réponse
+
+include::{snippets}/cdc-headers/response-headers.adoc[]
+
+==== Example de réponse
+
+include::{snippets}/cdc-get/http-response.adoc[]
+

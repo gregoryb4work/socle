@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    platform: teradata
+    url: jdbc:teradata://b
+    username: 
+    password: 
+    driverClassName: com.teradata.jdbc.TeraDriver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming_strategy: org.hibernate.cfg.DefaultNamingStrategy
+    properties:
+      hibernate:   
+        dialect: org.hibernate.dialect.TeradataDialect
